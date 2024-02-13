@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of DOM</title>
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <style>
+/* #all-liList{
+    text-align: center;
+    color: aqua;
+} */
+    </style>
+</head>
+<body onload="loder()">
+    
+    <header>
+        <h1>Welcome to my DOM</h1>
+    </header>
+    <main>
+        <section>
+            <h1>My Awesome DOM de baba</h1>
+
+            <ul>
+                <li>jalali Set</li>
+                <li>Shafayet</li>
+                <li>bonobash</li>
+                <li>jalali Set</li>
+                <li>Shafayet</li>
+                
+            </ul>
+        </section>
+        <section id="places-container">
+             <h1 id="places-title">Places I Like To visit</h1>
+
+            <ul>
+                <li class="importent-places">sundarban Set</li>
+                <li class="importent-places">bandarban</li>
+                <li class="importent-places">kataban</li>
+                <li class="importent-places">chataban Set</li>
+                
+                
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits changed by JS</h1>
+
+            <ul id="all-liList">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>    
+            </ul>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+    <script src="js/innerJS.js"></script>
+
+    <script>
+        // console.log('adding JS inside the html file')
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection)
+        for(const li of liCollection){
+            // console.log(li.innerText)
+        }
+
+        const h1Collection = document.getElementsByTagName('h1');
+        for(const h1 of h1Collection){
+            // console.log(h1.innerText)
+        }
+
+        const liList = document.getElementById('all-liList');
+        document.onload = function (){
+            // liList.style.textAlign = 'center'
+        }
+      function  loder(){
+        liList.style.textAlign = 'center'
+      }
+    </script>
+    <script src="./styleIN.js"></script>
+</body>
+</html>

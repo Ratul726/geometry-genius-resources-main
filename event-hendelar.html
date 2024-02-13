@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="handler-status">Default text</h3>
+    <p id="input-text">Default input text</p>
+    <!-- <button onclick="console.log(45)">click</button> -->
+    <input type="text" id="inpur-field">
+    <button id="btn-update">Update</button>
+    <br><br>
+    <button onclick="handleOnclick()">Handel Event By Add onclick function</button>
+    <button id="event-listener">Handle event by addEventListener</button>
+
+    <script>
+        function handleOnclick(){
+            // console.log('button Clicked');
+
+            const handleStatus =document.getElementById('handler-status');
+            handleStatus.innerText = 'Handel by a function added by onclick'
+        }
+
+        // final option we can be USE all time
+        document.getElementById('event-listener').addEventListener('click',function (){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text update by add event listener button'
+        }) 
+        // option three
+        document.getElementById('btn-update').addEventListener('click',function(){
+            // console.log('update-button Clicked')
+            const inputField = document.getElementById('inpur-field');
+            const inputText =inputField.value;
+            const p =document.getElementById('input-text');
+            p.innerText=inputText;
+            inputField.value = '';
+        })
+
+    </script>
+</body>
+</html>
